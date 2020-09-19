@@ -1,8 +1,9 @@
 For the first UFO-level-1 table I kept the html and code simple. Creating the filter function and d3 event functions was very straight forward. In terms of populating the html code I tried a few
-methods. However, to avoid plagiarism, I used this code from Stackoverflow. I was able to do most of it on my own, but then the simplicity of this method appealed to me.
+methods. However, to avoid plagiarism, I used this code from Stackoverflow: https://stackoverflow.com/questions/51275730/populate-html-table-with-json-data. I was able to do most of it on my own, but then the simplicity of this method appealed to me. It basically pulls the header elements and then uses a foreach function to then fill the data from the filtered data that is the first part of the code. The nice part of this is that this code
+is also very easily replicable for the bonus level 2 assignment because I can keep this function by creating a final var filtered database but change how the first part of my function filters data in the more complex example. 
 
-Here is the reference for the table population function which I incorporated into my code: https://stackoverflow.com/questions/51275730/populate-html-table-with-json-data
+The second bonus component where I filtered based on multiple keys was also fairly straightforard. I decided that the easiest way to do it would be to compose a filter_key as a new dictionary which took the user input and then mapped it to the keys and values of the data file.
 
-It basically pulls the header elements and then uses a foreach function to then fill the data from the filtered data that is the first part of the code. The nice part of this is that this code
-is also very easily replicable for the bonus level 2 assignment because I can keep this function by creating a final var filtered database but change how the first part of my function 
-filters data in the more complex example. 
+I then simply needed to create a function that passed the keys and values into a new filter function based on multiple keys. Once again, stackoverflow was helpful in thinking through ways to do it and I incorporated the code from this section into my final section: https://stackoverflow.com/questions/31831651/javascript-filter-array-multiple-conditions/56784041
+
+I setup my filter key so that it only passed actual values. Otherwise the filter would return nothing because some of the values would be empty. So I created a number of conditional statements that passed over null value filter keys. If this was a production level we would need to add values or ways to take the input value and convert it to proper state and country names. But if the user inputs state abbreviations and date format correctly then it works. I suppose I could have added that more explicitly. But I tried to put hints into the form fields. 
